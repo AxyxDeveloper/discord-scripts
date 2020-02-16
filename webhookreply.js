@@ -1,4 +1,6 @@
-const Discord = require("Discord.js")
+
+//This is a hardcore bot for professionals. Please use this if you know wat this does.
+const Discord = require("discord.js")
 const client = new Discord.Client()
 
 client.on("message", async function (message) {
