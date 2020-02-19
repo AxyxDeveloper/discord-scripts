@@ -34,6 +34,7 @@
                 pollStatus.edit(pollEmbed4)
                 setTimeout(() => {
                     pollStatus.delete()
+                    message.delete()
                 }, 8000) //you can change the time of the status message will be deleted
             })
         })
