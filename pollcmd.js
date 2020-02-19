@@ -2,9 +2,8 @@
 
     if(command === "poll") {
         if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("You're not allowed to use this command!") //remove this line of code to allow everyone to use
-        const pollChannel = message.mentions.channels.first()
-        if(!pollChannel) return message.reply("Specify a Channel to send the poll in.");
-        const pollTitle = args[1]
+        const pollChannel = message.channel
+        const pollTitle = message.content.split(' ').splice(1).join(' ');
         if(!pollTitle) return message.reply("Specify a Title!");
         pollTitle.replace(" ", " ");
         const pollEmbed1 = new Discord.RichEmbed()
