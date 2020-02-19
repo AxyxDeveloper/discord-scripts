@@ -1,9 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client()
 
-client.on("ready", async function (ready) {
-    client.user.setActivity(".search <id>", {type:"WATCHING"})
-})
 client.on("message", async function (message) {
     const prefix = "!";
     const args = message.content
