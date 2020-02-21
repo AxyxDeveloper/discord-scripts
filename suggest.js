@@ -10,9 +10,10 @@ client.on("message", async function (message) {
     const command = args.shift().toLowerCase();
     if(message.author.bot) return;
     if(!message.content.startsWith === prefix) return;
-    if (command === "suggest") {
+  try {
+      if (command === "suggest") {
         const suggestion = message.content.split(' ').splice(1).join(' ');
-        const channel = message.guild.channels.find(ch => ch.name === 'suggestions');
+        var channel = message.guild.channels.find(ch => ch.name === 'suggestions');
         if(!suggestion) return message.reply("You didn't specify a suggestion!")
         const suggestEmbed = new Discord.RichEmbed()
         .setColor("#7cfc00")
@@ -23,10 +24,19 @@ client.on("message", async function (message) {
         if(!channel) return;
         channel.send(suggestEmbed).then(msg => {
             msg.react("👍")
-            msg.react("👎")
+            setTimeout(() => {
+              msg.react("👎")
+            }, 2000)
             message.delete()
         })
     }
+  } catch (error) {
+    const Error = new Discord.RichEmbed()
+    .setTitle("Error")
+    .setDescription(Error)
+    var channel = message.guild.channels.find(ch => ch.name === 'logs');
+    channel.send(Error)
+  }
 })
 
 client.login("token")
