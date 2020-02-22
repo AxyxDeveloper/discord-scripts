@@ -2,9 +2,11 @@
     try {
     const time = args[0]
     if(!time) return message.reply("Specify a time to set the timer!");
+      message.delete()
     const timerEmbed = new Discord.RichEmbed()
     .setTitle("Timer")
     .setDescription("I will notify you when this timer has ended.")
+    .setFooter(`${message.member.nickname} - ${time}`)
     .setColor("#ff8c00")
     message.channel.send(timerEmbed).then(msg => {
     setTimeout(() => {
