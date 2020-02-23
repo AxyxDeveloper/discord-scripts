@@ -1,4 +1,4 @@
-if (command === "giveaway") {
+if (command === "giveaway") { //Requires "pretty-ms" module
         if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("You don't have permission!")
         const channel = message.mentions.channels.first() || args[0]
         if(!channel) return message.reply("Specify a channel!");
