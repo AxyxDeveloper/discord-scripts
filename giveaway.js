@@ -20,7 +20,7 @@
                         channel.send(`${winner} has won ${item}! :tada:`)
                         const finalE = new Discord.RichEmbed()
                         .setTitle("Giveaway Over")
-                        .setColor("#7cfc00")
+                        .setColor("#ff8c00")
                         .setDescription(`Winner: ${winner}`)
                         msg.edit(finalE)
             }, ms(time))
