@@ -1,3 +1,4 @@
+try {
 if (command === "giveaway") { //Requires "pretty-ms" module
         if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("You don't have permission!")
         const channel = message.mentions.channels.first() || args[0]
@@ -33,7 +34,7 @@ if (command === "giveaway") { //Requires "pretty-ms" module
                     const embed = new Discord.RichEmbed()
         .setTitle("Giveaway! :tada:")
         .setDescription(`${item}\n\nTime Left: **${nice(milli)}**`)
-        .setColor("#7cfc00")
+        .setColor("#ff8c00")
         .setFooter(`React 🎉 to join`)
         .setTimestamp()
                     msg.edit(embed)
@@ -42,3 +43,6 @@ if (command === "giveaway") { //Requires "pretty-ms" module
         }, 1010)
         })
     }
+} catch (err) {
+        console.log("Timeout")
+}
