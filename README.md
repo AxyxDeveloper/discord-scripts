@@ -1,4 +1,2 @@
 # Read Me - DBS
-
-## Replacements - Typos
-`includes === prefix`, *Change it to:* `includes(prefix)`
+Version *12.0.2* of Discord.js
