@@ -1,4 +1,5 @@
- try {
+//requires 'pretty-ms' module
+try {
     if (command === "giveaway") {
       if (!message.member.hasPermission("ADMINISTRATOR"))
         return message.reply("You don't have permission!");
