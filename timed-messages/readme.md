@@ -34,4 +34,4 @@ Add a new timedmessage object
 Add a new messages object
 ```
 var messages = [<previous stuff>, "number"]
-    ```
+```
