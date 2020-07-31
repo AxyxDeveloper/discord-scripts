@@ -29,7 +29,8 @@ Add a new timedmessage object
         },
         "interval": "Time in MILLISECONDS",
         message": "your message here"
-}```
+}
+```
 Add a new messages object
 ```
 var messages = [<previous stuff>, "number"]
