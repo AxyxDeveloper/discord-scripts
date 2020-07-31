@@ -1,15 +1,3 @@
-const Discord = require("discord.js");
-const client = new Discord.Client()
-
-client.on("message", async function (message) {
-    const prefix = "!";
-    const args = message.content
-        .slice(prefix.length)
-        .trim()
-        .split(/ +/g);
-    const command = args.shift().toLowerCase();
-    if(message.author.bot) return;
-    if(!message.content.startsWith === prefix) return;
   try {
       if (command === "suggest") {
         const suggestion = message.content.split(' ').splice(1).join(' ');
@@ -37,6 +25,3 @@ client.on("message", async function (message) {
     var channel = message.guild.channels.find(ch => ch.name === 'logs');
     channel.send(Error)
   }
-})
-
-client.login("token")
