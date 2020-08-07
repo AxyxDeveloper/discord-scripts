@@ -38,7 +38,7 @@ try {
             var filteredWinner = peopleReacted.filter(
               id => id !== client.user.id
             );
-            var winner = peopleReacted.random();
+            var winner = filteredWinner.random();
 
             channel.send(`${winner} has won ${item}! :tada:`);
             const finalE = new Discord.RichEmbed()
